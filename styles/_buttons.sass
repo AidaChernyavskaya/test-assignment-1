@@ -1,0 +1,31 @@
+@import "variables"
+
+.arrow_buttons
+  display: none
+  @media only screen and (max-width: 850px)
+    display: flex
+  &__background
+    width: 3rem
+    height: 3rem
+    border: .2rem solid $grey
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    transition: all .3s ease
+    pointer-events: auto
+    &:hover
+      border: .2rem solid $text-orange
+    &:active
+      transform: translateY(.2rem)
+  &__img
+    user-select: none
+  &__prev
+    margin-right: 1rem
+  &__next
+
+.arrow__disactive
+  cursor: default
+  opacity: .5
+  pointer-events: none

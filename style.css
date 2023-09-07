@@ -12,6 +12,93 @@ p {
   text-decoration: underline;
 }
 
+h2 {
+  margin-right: 1rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.h2__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.h2__header hr {
+  flex-grow: 1;
+  border: 0.1rem solid #dbdee6;
+  margin-right: 2rem;
+}
+
+h5 {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #394a5c;
+}
+
+.h5__orange {
+  color: #ff5816;
+}
+.h5__small {
+  font-size: 5rem;
+}
+.h5__xsmall {
+  font-size: 4.2rem;
+  text-align: center;
+  line-height: 2rem;
+}
+.h5__x {
+  font-size: 1.9rem;
+  line-height: 4rem;
+}
+
+h6 {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  user-select: none;
+}
+
+.arrow_buttons {
+  display: none;
+}
+@media only screen and (max-width: 850px) {
+  .arrow_buttons {
+    display: flex;
+  }
+}
+.arrow_buttons__background {
+  width: 3rem;
+  height: 3rem;
+  border: 0.2rem solid #dbdee6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+.arrow_buttons__background:hover {
+  border: 0.2rem solid #ff5816;
+}
+.arrow_buttons__background:active {
+  transform: translateY(0.2rem);
+}
+.arrow_buttons__img {
+  user-select: none;
+}
+.arrow_buttons__prev {
+  margin-right: 1rem;
+}
+.arrow__disactive {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .metrics {
   background: #2c3f53;
   display: flex;
@@ -87,6 +174,44 @@ p {
   }
 }
 
+.digits {
+  display: flex;
+  justify-content: center;
+}
+.digits__content {
+  width: 65%;
+}
+@media only screen and (max-width: 980px) {
+  .digits__content {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+.digits__information {
+  display: flex;
+  justify-content: space-around;
+}
+
+.digit {
+  width: 25%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  flex-grow: 1;
+}
+.digit__background {
+  border-radius: 50%;
+  border: 0.1rem solid #dbdee6;
+  width: 13.2rem;
+  height: 13.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
 *, ::after, ::before {
   margin: 0;
   padding: 0;
@@ -100,6 +225,10 @@ html {
 body {
   font-family: "Roboto Light", sans-serif;
   background: #ffffff;
+}
+
+.active {
+  display: flex;
 }
 
 /*# sourceMappingURL=style.css.map */
