@@ -1,0 +1,21 @@
+@import "../variables"
+
+.metrics
+  background: $metrics-background
+  display: flex
+  justify-content: center
+  &__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 65%
+    padding: 2.1rem 0
+    @media only screen and (max-width: 980px)
+      width: 100%
+      padding: 2.1rem 1.5rem
+    @media only screen and (max-width: 320px)
+      justify-content: center
+      padding: 2.1rem 11.6rem
+  &__text
+    @media only screen and (max-width: 320px)
+      display: none

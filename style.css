@@ -1,0 +1,53 @@
+p {
+  font-size: 1.1rem;
+}
+
+.text__blue {
+  color: #c8d4dc;
+}
+
+.metrics {
+  background: #2c3f53;
+  display: flex;
+  justify-content: center;
+}
+.metrics__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 65%;
+  padding: 2.1rem 0;
+}
+@media only screen and (max-width: 980px) {
+  .metrics__content {
+    width: 100%;
+    padding: 2.1rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .metrics__content {
+    justify-content: center;
+    padding: 2.1rem 11.6rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .metrics__text {
+    display: none;
+  }
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Light", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
