@@ -178,6 +178,11 @@ h6 {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 320px) {
+  .digits {
+    display: none;
+  }
+}
 .digits__content {
   width: 65%;
 }

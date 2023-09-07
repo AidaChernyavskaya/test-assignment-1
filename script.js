@@ -1,6 +1,13 @@
 const countVisibleSlides = (pageBlock = '') => {
     switch (pageBlock) {
         case 'digits':
+            if (window.innerWidth < 590) {
+                return 2;
+            } else if (window.innerWidth > 850) {
+                return 6;
+            } else {
+                return 4;
+            }
             return window.innerWidth > 850 ? 6 : 4;
         default:
             return window.innerWidth > 850 ? 6 : 3;
