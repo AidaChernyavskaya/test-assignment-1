@@ -2,7 +2,7 @@
 
 .arrow_buttons
   display: none
-  @media only screen and (max-width: 850px)
+  @media only screen and (max-width: 980px)
     display: flex
   &__background
     width: 3rem
@@ -23,7 +23,16 @@
     user-select: none
   &__prev
     margin-right: 1rem
-  &__next
+  &__a
+    color: $text-dark-blue
+    font-size: 1.3rem
+    text-decoration: underline
+    margin-left: 2rem
+    cursor: pointer
+    @media only screen and (max-width: 980px)
+      display: none
+    &:hover
+      color: $dark-blue
 
 .arrow__disactive
   cursor: default

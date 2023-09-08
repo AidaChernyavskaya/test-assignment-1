@@ -1,0 +1,63 @@
+@import "../variables"
+
+.card
+  width: 23rem
+  border-radius: 1rem
+  border: .1rem solid $grey
+  position: relative
+  padding: 2rem
+  &:hover
+    border: .1rem solid $text-orange
+
+.label
+  width: 3.4rem
+  height: 4.3rem
+  clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%)
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 0
+  left: 1rem
+  &__blue
+    background: $label-blue
+  &__green
+    background: $label-green
+  &__yellow
+    background: $label-yellow
+
+.card__photo
+  display: block
+  margin: 0 auto 3rem auto
+  padding-top: 1.6rem
+
+.card__price
+  display: flex
+  align-items: flex-end
+  margin-bottom: 2rem
+
+.card__buttons
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &_buy
+    background: $text-orange
+    border: none
+    border-bottom: .4rem solid $dark-orange
+    border-radius: 1rem
+    padding: 1rem 1.5rem
+    color: $white
+    font-size: 1.4rem
+    text-transform: uppercase
+    cursor: pointer
+    transition: all .2s ease
+    &:hover
+      background: $card-button-hover
+      border-bottom: .4rem solid $card-button-hover-border
+    &:active
+      transform: translateY(.2rem)
+  &_more
+    color: $text-dark-blue
+    font-size: 1.3rem
+    &:hover
+      color: $dark-blue
