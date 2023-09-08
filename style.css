@@ -27,7 +27,11 @@ h2 {
 .h2__header hr {
   flex-grow: 1;
   border: 0.1rem solid #dbdee6;
-  margin-right: 2rem;
+}
+@media only screen and (max-width: 850px) {
+  .h2__header hr {
+    margin-right: 2rem;
+  }
 }
 
 h5 {
@@ -108,7 +112,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 70%;
   padding: 2.1rem 0;
 }
 @media only screen and (max-width: 980px) {
@@ -137,7 +141,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 65%;
+  width: 70%;
   padding: 4rem 0 8rem;
 }
 @media only screen and (max-width: 980px) {
@@ -184,7 +188,7 @@ h6 {
   }
 }
 .digits__content {
-  width: 65%;
+  width: 70%;
 }
 @media only screen and (max-width: 980px) {
   .digits__content {
@@ -215,6 +219,83 @@ h6 {
   align-items: center;
   margin-bottom: 2rem;
   user-select: none;
+}
+
+.brands {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 470px) {
+  .brands {
+    display: none;
+  }
+}
+.brands__content {
+  width: 70%;
+}
+@media only screen and (max-width: 980px) {
+  .brands__content {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+.brands__a {
+  color: #4673ab;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+@media only screen and (max-width: 850px) {
+  .brands__a {
+    display: none;
+  }
+}
+.brands__a:hover {
+  color: #394a5c;
+}
+
+.brands__information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.brand {
+  width: 13rem;
+  height: 5rem;
+  background: url("/projects/test-assignment-1/images/brands.svg") no-repeat;
+  display: none;
+}
+.brand_1 {
+  background-position: 0 0;
+  width: 12rem;
+}
+.brand_2 {
+  background-position: -13rem 0;
+}
+.brand_3 {
+  background-position: -27rem 0;
+}
+.brand_4 {
+  background-position: -40rem 0;
+  width: 10rem;
+}
+.brand_5 {
+  background-position: -51.5rem 0;
+}
+.brand_6 {
+  background-position: -65rem 0;
+  width: 12rem;
+}
+.brand_7 {
+  background-position: -77rem 0;
+}
+.brand_8 {
+  background-position: -89rem 0;
+}
+.brand_9 {
+  background-position: -103rem 0;
 }
 
 *, ::after, ::before {

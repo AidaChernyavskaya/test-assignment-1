@@ -1,0 +1,54 @@
+@import "../variables"
+
+.brands
+  display: flex
+  justify-content: center
+  @media only screen and (max-width: 470px)
+    display: none
+  &__content
+    width: 70%
+    @media only screen and (max-width: 980px)
+      width: 100%
+      padding: 0 1.5rem
+  &__a
+    color: $text-dark-blue
+    font-size: 1.3rem
+    text-decoration: underline
+    margin-left: 2rem
+    cursor: pointer
+    @media only screen and (max-width: 850px)
+      display: none
+    &:hover
+      color: $dark-blue
+
+.brands__information
+  display: flex
+  justify-content: space-between
+  margin-bottom: 2rem
+
+.brand
+  width: 13rem
+  height: 5rem
+  background: url('/projects/test-assignment-1/images/brands.svg') no-repeat
+  display: none
+  &_1
+    background-position: 0 0
+    width: 12rem
+  &_2
+    background-position: -13rem 0
+  &_3
+    background-position: -27rem 0
+  &_4
+    background-position: -40rem 0
+    width: 10rem
+  &_5
+    background-position: -51.5rem 0
+  &_6
+    background-position: -65rem 0
+    width: 12rem
+  &_7
+    background-position: -77rem 0
+  &_8
+    background-position: -89rem 0
+  &_9
+    background-position: -103rem 0
