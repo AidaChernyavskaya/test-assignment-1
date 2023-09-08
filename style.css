@@ -361,6 +361,34 @@ h6 {
   }
 }
 
+.novelty {
+  display: flex;
+  justify-content: center;
+}
+.novelty__content {
+  width: 70%;
+}
+@media only screen and (max-width: 980px) {
+  .novelty__content {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+.novelty__cards {
+  margin-bottom: 4rem;
+}
+
+.novelty__cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .novelty__cards {
+    justify-content: center;
+  }
+}
+
 .card {
   width: 23rem;
   border-radius: 1rem;
@@ -369,6 +397,7 @@ h6 {
   padding: 1.5rem;
   display: none;
   flex-direction: column;
+  user-select: none;
 }
 .card:hover {
   border: 0.1rem solid #ff5816;
@@ -393,6 +422,9 @@ h6 {
 }
 .label__green {
   background: #42c16c;
+}
+.label__green p {
+  font-size: 1.2rem;
 }
 .label__yellow {
   background: #f7c159;

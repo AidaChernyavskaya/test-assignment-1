@@ -1,8 +1,8 @@
-const createCard = (cardObj) => {
-    const cardsContainer = document.getElementById('sale__cards');
+const createCard = (cardObj, containerID, cardName) => {
+    const cardsContainer = document.getElementById(containerID);
 
     const card = document.createElement('div');
-    card.classList.add('card', 'card__sale');
+    card.classList.add('card', cardName);
 
     const label = document.createElement('div');
     label.classList.add('label', `label__${cardObj.color}`);
@@ -63,8 +63,15 @@ const createCard = (cardObj) => {
 
 const drawSaleCards = () => {
     saleCards.forEach((card) => {
-        createCard(card);
+        createCard(card, 'sale__cards', 'card__sale');
+    })
+};
+
+const drawNoveltyCards = () => {
+    noveltyCards.forEach((card) => {
+        createCard(card, 'novelty__cards', 'card__novelty');
     })
 };
 
 drawSaleCards();
+drawNoveltyCards();

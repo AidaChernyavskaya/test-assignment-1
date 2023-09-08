@@ -6,6 +6,34 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <div class="novelty">
+    <div class="novelty__content">
+        <div class="h2__header">
+            <h2>Новинки</h2>
+            <hr>
+            <a class="arrow_buttons__a">Все новинки</a>
+            <div class="arrow_buttons">
+                <div class="arrow_buttons__prev arrow_buttons__background" id="novelty_prev">
+                    <img class="arrow_buttons__img" src="images/arrow.svg" alt="arrow prev">
+                </div>
+                <div class="arrow_buttons__next arrow_buttons__background" id="novelty_next">
+                    <img class="arrow_buttons__img" src="images/arrow-next.svg" alt="arrow next">
+                </div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="slider__button" id="novelty_prev_center">
+                <img class="slider__button__img slider__button__img_prev" src="images/arrow-big-prev.svg" alt="arrow prev">
+            </div>
+            <div class="novelty__cards" id="novelty__cards"></div>
+            <div class="slider__button" id="novelty_next_center">
+                <img class="slider__button__img slider__button__img_next" src="images/arrow-big-prev.svg" alt="arrow next">
+            </div>
+        </div>
+
+    </div>
+</div>
+
     <div class="sale">
         <div class="sale__content">
             <div class="h2__header">
@@ -155,6 +183,7 @@
         </div>
     </div>
 </body>
+<script src="scripts/noveltyCards.js"></script>
 <script src="scripts/salesCards.js"></script>
 <script src="scripts/cards.js"></script>
 <script src="./script.js"></script>

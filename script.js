@@ -106,14 +106,36 @@ const saleSlider = () => {
 
     toggleActiveClass(slides, to, from);
     slider(arrowPrev, arrowNext, from, to, slides);
-}
+};
+
+const noveltySlider = () => {
+    let arrowPrev;
+    let arrowNext;
+    if (window.innerWidth > 980) {
+        arrowPrev = document.getElementById('novelty_prev_center');
+        arrowNext = document.getElementById('novelty_next_center');
+    } else {
+        arrowPrev = document.getElementById('novelty_prev');
+        arrowNext = document.getElementById('novelty_next');
+    }
+    const slides = document.querySelectorAll('.card__novelty');
+
+    let visible = countVisibleSlides();
+    let from = 0;
+    let to = visible - 1;
+
+    toggleActiveClass(slides, to, from);
+    slider(arrowPrev, arrowNext, from, to, slides);
+};
 
 digitsSlider();
 brandsSlider();
 saleSlider();
+noveltySlider();
 
 window.addEventListener('resize', () => {
     digitsSlider();
     brandsSlider();
     saleSlider();
+    noveltySlider();
 });
