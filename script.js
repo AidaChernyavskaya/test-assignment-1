@@ -28,7 +28,6 @@ const countVisibleSlides = (pageBlock = '') => {
             } else {
                 return 1;
             }
-            return window.innerWidth > 850 ? 4 : 2;
     }
 };
 
