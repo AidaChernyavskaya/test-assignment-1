@@ -64,7 +64,7 @@ const createCard = (cardObj, containerID, cardName) => {
     card.appendChild(prices);
     card.appendChild(buttons);
     cardsContainer.appendChild(card);
-}
+};
 
 const drawSaleCards = () => {
     saleCards.forEach((card) => {

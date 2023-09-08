@@ -147,11 +147,32 @@ const recommendationSlider = () => {
     slider(arrowPrev, arrowNext, from, to, slides);
 };
 
+const promotionSlider = () => {
+    let arrowPrev;
+    let arrowNext;
+    if (window.innerWidth > 980) {
+        arrowPrev = document.getElementById('promotion_prev_center');
+        arrowNext = document.getElementById('promotion_next_center');
+    } else {
+        arrowPrev = document.getElementById('promotion_prev');
+        arrowNext = document.getElementById('promotion_next');
+    }
+    const slides = document.querySelectorAll('.card__promotion');
+
+    let visible = countVisibleSlides();
+    let from = 0;
+    let to = visible - 1;
+
+    toggleActiveClass(slides, to, from);
+    slider(arrowPrev, arrowNext, from, to, slides);
+};
+
 digitsSlider();
 brandsSlider();
 saleSlider();
 noveltySlider();
 recommendationSlider();
+promotionSlider();
 
 window.addEventListener('resize', () => {
     digitsSlider();
@@ -159,4 +180,5 @@ window.addEventListener('resize', () => {
     saleSlider();
     noveltySlider();
     recommendationSlider();
+    promotionSlider();
 });

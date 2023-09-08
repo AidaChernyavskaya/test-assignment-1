@@ -76,3 +76,60 @@
     font-size: 1.3rem
     &:hover
       color: $dark-blue
+
+.card__promotion
+  justify-content: flex-start
+  padding: 0
+  margin-right: 0
+  .card__name
+    padding: 2rem
+    margin-bottom: 0
+    height: auto
+  .card__photo
+    margin: 0
+    padding: 0
+    height: auto
+    @media only screen and (max-width: 1040px)
+      width: 22rem
+    @media only screen and (max-width: 960px)
+      width: 100%
+  .card__buttons_more
+    padding: 2rem
+    display: block
+    margin: 0 auto
+
+.card__text
+  font-size: 1.3rem
+  padding: 2rem
+
+.validity
+  background: $grey
+  display: flex
+  padding: 2rem 2rem 0 2rem
+  &__img
+    background: url(images/timer.png), $grey no-repeat
+    background-blend-mode: multiply
+    height: 2.8rem
+    width: 12.6rem
+    @media only screen and (max-width: 1040px)
+      margin: 0 auto
+  .text__black
+    margin-right: 0
+    width: 32%
+    @media only screen and (max-width: 1040px)
+      display: none
+
+.timer__text
+  background: $grey
+  display: flex
+  justify-content: flex-start
+  padding: 0 2rem 2rem 8.3rem
+  @media only screen and (max-width: 1040px)
+    padding: 0 2rem 2rem 2rem
+    justify-content: center
+  p
+    font-size: 1.1rem
+    color: $light-grey
+    margin-top: .5rem
+  .days, .hours
+    margin-right: 1.6rem
