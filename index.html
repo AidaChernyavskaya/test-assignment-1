@@ -21,46 +21,16 @@
                     </div>
                 </div>
             </div>
-            <div class="sale__cards">
-                <div class="card">
-                    <div class="label label__blue">
-                        <p class="text__white">%</p>
-                    </div>
-                    <img src="images/img1.png" alt="товар" class="card__photo">
-                    <h3 class="card__name">IP телефон Siemens Gigaset C530A IP</h3>
-                    <div class="card__price">
-                        <p class="text__black">Цена:</p>
-                        <h2 class="h2__lowerCase">12 300 р.</h2>
-                        <p class="text__crossed">15 500 р.</p>
-                    </div>
-                    <div class="card__buttons">
-                        <button class="card__buttons_buy">
-                            <img src="images/cart.svg" alt="корзинка" class="card__buttons_img">
-                            Купить
-                        </button>
-                        <a href="" class="card__buttons_more">Подробнее</a>
-                    </div>
+            <div class="slider">
+                <div class="slider__button" id="sale_prev_center">
+                    <img class="slider__button__img slider__button__img_prev" src="images/arrow-big-prev.svg" alt="arrow prev">
                 </div>
-                <div class="card">
-                    <div class="label label__blue">
-                        <p class="text__white">%</p>
-                    </div>
-                    <img src="images/img1.png" alt="товар" class="card__photo">
-                    <h3 class="card__name">IP телефон Siemens Gigaset C530A IP</h3>
-                    <div class="card__price">
-                        <p class="text__black">Цена:</p>
-                        <h2 class="h2__lowerCase">12 300 р.</h2>
-                        <p class="text__crossed">15 500 р.</p>
-                    </div>
-                    <div class="card__buttons">
-                        <button class="card__buttons_buy">
-                            <img src="images/cart.svg" alt="корзинка" class="card__buttons_img">
-                            Купить
-                        </button>
-                        <a href="" class="card__buttons_more">Подробнее</a>
-                    </div>
+                <div class="sale__cards" id="sale__cards"></div>
+                <div class="slider__button" id="sale_next_center">
+                    <img class="slider__button__img slider__button__img_next" src="images/arrow-big-prev.svg" alt="arrow next">
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -185,5 +155,7 @@
         </div>
     </div>
 </body>
+<script src="scripts/salesCards.js"></script>
+<script src="scripts/cards.js"></script>
 <script src="./script.js"></script>
 </html>

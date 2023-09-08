@@ -35,8 +35,9 @@ h2 {
 
 .h2__lowerCase {
   text-transform: lowercase;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-right: 0.5rem;
+  width: 45%;
 }
 
 .h2__header {
@@ -60,6 +61,8 @@ h3 {
   text-decoration: underline;
   cursor: pointer;
   margin-bottom: 2rem;
+  height: 20%;
+  align-self: end;
 }
 h3:hover {
   color: #ff5816;
@@ -350,6 +353,12 @@ h6 {
 .sale__cards {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .sale__cards {
+    justify-content: center;
+  }
 }
 
 .card {
@@ -357,10 +366,15 @@ h6 {
   border-radius: 1rem;
   border: 0.1rem solid #dbdee6;
   position: relative;
-  padding: 2rem;
+  padding: 1.5rem;
+  display: none;
+  flex-direction: column;
 }
 .card:hover {
   border: 0.1rem solid #ff5816;
+}
+.card:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .label {
@@ -388,15 +402,19 @@ h6 {
   display: block;
   margin: 0 auto 3rem auto;
   padding-top: 1.6rem;
+  height: 45%;
 }
 
 .card__price {
   display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 2rem;
+  height: 20%;
 }
 
 .card__buttons {
+  height: 20%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -412,6 +430,8 @@ h6 {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
+  display: flex;
+  justify-content: space-between;
 }
 .card__buttons_buy:hover {
   background: #4673ab;
@@ -420,12 +440,38 @@ h6 {
 .card__buttons_buy:active {
   transform: translateY(0.2rem);
 }
+.card__buttons_img {
+  margin-right: 0.5rem;
+}
 .card__buttons_more {
   color: #4673ab;
   font-size: 1.3rem;
 }
 .card__buttons_more:hover {
   color: #394a5c;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider__button__img {
+  cursor: pointer;
+  user-select: none;
+}
+@media only screen and (max-width: 980px) {
+  .slider__button__img {
+    display: none;
+  }
+}
+.slider__button__img_next {
+  transform: rotate(180deg);
+  margin-left: 1rem;
+}
+.slider__button__img_prev {
+  margin-right: 2rem;
 }
 
 *, ::after, ::before {

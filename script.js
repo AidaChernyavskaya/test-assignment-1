@@ -9,15 +9,26 @@ const countVisibleSlides = (pageBlock = '') => {
                 return 4;
             }
         case 'brands':
-            if (window.innerWidth < 1300 && window.innerWidth > 1150) {
+            if (window.innerWidth < 1500 && window.innerWidth > 1150) {
                 return 7;
             } else if (window.innerWidth < 1150 && window.innerWidth > 600) {
                 return 5;
             } else if (window.innerWidth < 600) {
                 return 3;
+            } else {
+                return 9;
             }
         default:
-            return window.innerWidth > 850 ? 6 : 3;
+            if (window.innerWidth > 1380 || (window.innerWidth < 980 && window.innerWidth > 960)) {
+                return 4;
+            } else if ((window.innerWidth < 1380 && window.innerWidth > 980) || (window.innerWidth < 960 && window.innerWidth > 740)) {
+                return 3;
+            } else if (window.innerWidth < 740 && window.innerWidth > 500) {
+                return 2
+            } else {
+                return 1;
+            }
+            return window.innerWidth > 850 ? 4 : 2;
     }
 };
 
@@ -77,10 +88,32 @@ const brandsSlider = () => {
     slider(arrowPrev, arrowNext, from, to, slides);
 }
 
+const saleSlider = () => {
+    let arrowPrev;
+    let arrowNext;
+    if (window.innerWidth > 980) {
+        arrowPrev = document.getElementById('sale_prev_center');
+        arrowNext = document.getElementById('sale_next_center');
+    } else {
+        arrowPrev = document.getElementById('sale_prev');
+        arrowNext = document.getElementById('sale_next');
+    }
+    const slides = document.querySelectorAll('.card__sale');
+
+    let visible = countVisibleSlides();
+    let from = 0;
+    let to = visible - 1;
+
+    toggleActiveClass(slides, to, from);
+    slider(arrowPrev, arrowNext, from, to, slides);
+}
+
 digitsSlider();
 brandsSlider();
+saleSlider();
 
 window.addEventListener('resize', () => {
     digitsSlider();
     brandsSlider();
+    saleSlider();
 });

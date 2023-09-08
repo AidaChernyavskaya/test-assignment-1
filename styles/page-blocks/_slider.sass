@@ -1,0 +1,17 @@
+@import "../variables"
+
+.slider
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.slider__button__img
+  cursor: pointer
+  user-select: none
+  @media only screen and (max-width: 980px)
+    display: none
+  &_next
+    transform: rotate(180deg)
+    margin-left: 1rem
+  &_prev
+    margin-right: 2rem
