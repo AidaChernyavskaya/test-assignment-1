@@ -127,14 +127,36 @@ const noveltySlider = () => {
     slider(arrowPrev, arrowNext, from, to, slides);
 };
 
+const recommendationSlider = () => {
+    let arrowPrev;
+    let arrowNext;
+    if (window.innerWidth > 980) {
+        arrowPrev = document.getElementById('recommendation_prev_center');
+        arrowNext = document.getElementById('recommendation_next_center');
+    } else {
+        arrowPrev = document.getElementById('recommendation_prev');
+        arrowNext = document.getElementById('recommendation_next');
+    }
+    const slides = document.querySelectorAll('.card__recommendation');
+
+    let visible = countVisibleSlides();
+    let from = 0;
+    let to = visible - 1;
+
+    toggleActiveClass(slides, to, from);
+    slider(arrowPrev, arrowNext, from, to, slides);
+};
+
 digitsSlider();
 brandsSlider();
 saleSlider();
 noveltySlider();
+recommendationSlider();
 
 window.addEventListener('resize', () => {
     digitsSlider();
     brandsSlider();
     saleSlider();
     noveltySlider();
+    recommendationSlider();
 });

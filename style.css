@@ -389,6 +389,34 @@ h6 {
   }
 }
 
+.recommendation {
+  display: flex;
+  justify-content: center;
+}
+.recommendation__content {
+  width: 70%;
+}
+@media only screen and (max-width: 980px) {
+  .recommendation__content {
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+.recommendation__cards {
+  margin-bottom: 4rem;
+}
+
+.recommendation__cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media only screen and (max-width: 500px) {
+  .recommendation__cards {
+    justify-content: center;
+  }
+}
+
 .card {
   width: 23rem;
   border-radius: 1rem;

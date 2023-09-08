@@ -34,6 +34,34 @@
     </div>
 </div>
 
+    <div class="recommendation">
+        <div class="recommendation__content">
+            <div class="h2__header">
+                <h2>Рекомендуем</h2>
+                <hr>
+                <a class="arrow_buttons__a">Все рекомендации</a>
+                <div class="arrow_buttons">
+                    <div class="arrow_buttons__prev arrow_buttons__background" id="recommendation_prev">
+                        <img class="arrow_buttons__img" src="images/arrow.svg" alt="arrow prev">
+                    </div>
+                    <div class="arrow_buttons__next arrow_buttons__background" id="recommendation_next">
+                        <img class="arrow_buttons__img" src="images/arrow-next.svg" alt="arrow next">
+                    </div>
+                </div>
+            </div>
+            <div class="slider">
+                <div class="slider__button" id="recommendation_prev_center">
+                    <img class="slider__button__img slider__button__img_prev" src="images/arrow-big-prev.svg" alt="arrow prev">
+                </div>
+                <div class="recommendation__cards" id="recommendation__cards"></div>
+                <div class="slider__button" id="recommendation_next_center">
+                    <img class="slider__button__img slider__button__img_next" src="images/arrow-big-prev.svg" alt="arrow next">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <div class="sale">
         <div class="sale__content">
             <div class="h2__header">
@@ -183,6 +211,7 @@
         </div>
     </div>
 </body>
+<script src="scripts/recommendationCards.js"></script>
 <script src="scripts/noveltyCards.js"></script>
 <script src="scripts/salesCards.js"></script>
 <script src="scripts/cards.js"></script>

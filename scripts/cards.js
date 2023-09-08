@@ -6,10 +6,16 @@ const createCard = (cardObj, containerID, cardName) => {
 
     const label = document.createElement('div');
     label.classList.add('label', `label__${cardObj.color}`);
-    const labelText = document.createElement('p');
-    labelText.classList.add('text__white');
-    labelText.innerHTML = cardObj.label;
-    label.appendChild(labelText);
+    if (cardObj.color === 'yellow') {
+        const labelImg = document.createElement('img');
+        labelImg.src = cardObj.label;
+        label.appendChild(labelImg);
+    } else {
+        const labelText = document.createElement('p');
+        labelText.classList.add('text__white');
+        labelText.innerHTML = cardObj.label;
+        label.appendChild(labelText);
+    }
 
     const img = document.createElement('img');
     img.src = cardObj.img;
@@ -43,7 +49,6 @@ const createCard = (cardObj, containerID, cardName) => {
     buttonImg.src = "images/cart.svg";
     buttonBuy.appendChild(buttonImg);
     const buttonText = document.createElement('p');
-    // buttonText.classList.add('text__crossed');
     buttonText.innerHTML = 'Купить';
     buttonBuy.appendChild(buttonText);
     const buttonMore = document.createElement('a');
@@ -73,5 +78,12 @@ const drawNoveltyCards = () => {
     })
 };
 
+const drawRecommendationsCards = () => {
+    recommendationCards.forEach((card) => {
+        createCard(card, 'recommendation__cards', 'card__recommendation');
+    })
+};
+
 drawSaleCards();
 drawNoveltyCards();
+drawRecommendationsCards();
